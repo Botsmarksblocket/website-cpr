@@ -1,21 +1,47 @@
 * {
   box-sizing: border-box;
 }
+
+html,
+body {
+  /*Removes padding and margin from the grid-container*/
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .grid-container {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 100px repeat(3, 1fr) 100px;
+  grid-template-rows: 100px repeat(3, 1fr) 50px;
 }
+
 .header,
 .main,
 .sidebar,
 .footer {
+  /*Making sure that text inside the grid doesn't overflow*/
   word-wrap: break-word;
   word-break: break-word;
 }
+.header-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #0e3080;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.header-btn:hover {
+  background-color: #195493;
+}
 .header {
+  display: flex; /*Using flex to align the buttons inside the header*/
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   grid-column: 1/6;
   grid-row: 1/2;
   border: solid black;
@@ -37,25 +63,19 @@
   border: solid pink;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 @media (max-width: 480px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    .sidebar {
-      display: none;
-    }
+  }
+  .sidebar {
+    /*Removes sidebar one phone*/
+    display: none;
   }
   .header,
   .main,
   .sidebar,
-  .footer {    
+  .footer {
     grid-column: 1 / -1;
   }
 }
