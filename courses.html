@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursöversikt</title>
+    <link rel="icon" type="image/x-icon" href="images/heartfavicon.jpg" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <a href="index.html" class="header-btn">Huvudsida</a>
+        <a href="signup.html" class="header-btn">Anmäl till kurs</a>
+        <a href="courses.html" class="header-btn active">Kursöversikt</a>
+      </header>
+
+      <section class="courses">
+        <table class="courses-table">
+          <tr>
+            <th>Kurser</th>
+            <th>Datum</th>
+            <th>Tid</th>
+            <th>Plats</th>
+          </tr>
+
+          <tr>
+            <td>HLR för vuxna</td>
+            <td>2024-11-11</td>
+            <td>10.00-12.00</td>
+            <td>Huvudkontoret</td>
+          </tr>
+          <tr>
+            <td>HLR för barn</td>
+            <td>2024-11-11</td>
+            <td>13.00-15.00</td>
+            <td>Huvudkontoret</td>
+          </tr>
+          <tr>
+            <td>Första hjälpen-grundkurs</td>
+            <td>2024-11-06</td>
+            <td>14.00</td>
+            <td>Huvudkontoret</td>
+          </tr>
+          <tr>
+            <td>HLR och första hjälpen för arbetsplatser</td>
+            <td colspan="2">Ring eller maila för att boka datum och tid</td>
+            <td>På er arbetsplats</td>
+          </tr>
+        </table>
+
+        <video class="courses-video" autoplay muted loop>
+          <source src="videos/cpr.mp4" type="video/mp4" />
+          <!--If the mp4 doesn't work-->
+          <source src="videos/cpr.webm" type="video/webm" />
+        </video>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2024 Nordic HLR. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
