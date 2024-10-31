@@ -38,6 +38,105 @@ body {
   grid-template-rows: auto repeat(3, 1fr) auto;
 }
 
+.header {
+  display: flex; /*Using flex to align the buttons inside the header*/
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  grid-column: 1/6;
+  grid-row: 1/2;
+  background-color: #dbe2ef;
+}
+.header-btn {
+  padding: 12px 16px;
+  border: 2px solid #112d4e;
+  color: #112d4e;
+  background-color: #f9f7f7;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
+  text-decoration: none;
+}
+.header-btn:hover {
+  transform: scale(1.15);
+  color: #f50a0a;
+}
+
+.header-btn.active {
+  background-color: #3f72af;
+  color: white;
+  border: solid #112d4e;
+  transform: scale(1.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.welcome {
+  grid-column: 3/6;
+  grid-row: 2/5;
+  padding: 60px;
+}
+.welcome-item {
+  line-height: 1.5;
+  background-color: #f9f7f7;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 20px;
+  margin: auto;
+  border: solid #112d4e;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.welcome-item:hover {
+  transform: scale(1.05);
+}
+.welcome-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.welcome-h2 {
+  color: red;
+}
+.styled-hr {
+  border: none;
+  height: 3px;
+  background-color: #112d4e;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.sidebar {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  grid-column: 1/3;
+  grid-row: 2/5;
+}
+
+.sidebar-item {
+  max-width: 450px;
+  min-height: 800px;
+  line-height: 1.5;
+  background-color: #f9f7f7;
+  text-align: center;
+  padding: 10px;
+  border: solid #112d4e;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-left: none;
+  transition: transform 0.3s;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.h2-sidebar {
+  text-align: center;
+}
+.sidebar-item:hover {
+  transform: scale(1.05);
+}
 .sign-up {
   grid-column: 1/6;
   grid-row: 2/5;
@@ -91,47 +190,17 @@ input[type="submit"]:hover {
   background-color: #45a049;
   transform: scale(1.1);
 }
-
-.header {
-  display: flex; /*Using flex to align the buttons inside the header*/
-  justify-content: space-around;
-  flex-wrap: wrap;
+.thank-you {
+  display: flex;
   align-items: center;
-  grid-column: 1/6;
-  grid-row: 1/2;
-  background-color: #dbe2ef;
+  justify-content: center;
+  grid-column: 1 / -1;
+  grid-row: 2 / 5; 
+  height: 100%;
+  padding: 20px;
 }
-.header-btn {
-  padding: 12px 16px;
-  border: 2px solid #112d4e;
-  color: #112d4e;
-  background-color: #f9f7f7;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin: 10px;
-  text-decoration: none;
-}
-.header-btn:hover {
-  transform: scale(1.15);
-  color: #f50a0a;
-}
-
-.header-btn.active {
-  background-color: #3f72af;
-  color: white;
-  border: solid #112d4e;
-  transform: scale(1.15);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.main {
-  grid-column: 3/6;
-  grid-row: 2/5;
-  padding: 60px;
-}
-.main-item {
+.thank-you-item {
+  margin: auto;
   line-height: 1.5;
   background-color: #f9f7f7;
   max-width: 550px;
@@ -142,55 +211,6 @@ input[type="submit"]:hover {
   border-radius: 10px;
   transition: transform 0.3s;
 }
-.main-item:hover {
-  transform: scale(1.05);
-}
-.main-item img {
-  width: 100%;
-  border-radius: 8px;
-}
-.styled-hr {
-  border: none;
-  height: 3px;
-  background-color: #112d4e;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-.main-h2 {
-  color: red;
-}
-.sidebar {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  align-items: center;
-  grid-column: 1/3;
-  grid-row: 2/5;
-}
-
-.sidebar-item {
-  max-width: 450px;
-  min-height: 800px;
-  line-height: 1.5;
-  background-color: #f9f7f7;
-  text-align: center;
-  padding: 10px;
-  border: solid #112d4e;
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-left: none;
-  transition: transform 0.3s;
-  overflow-wrap: break-word;
-  text-align: left;
-}
-
-.h2-sidebar {
-  text-align: center;
-}
-.sidebar-item:hover {
-  transform: scale(1.05);
-}
-
 .courses {
   display: flex;
   align-items: center;
@@ -247,6 +267,7 @@ td {
   text-align: center;
   color: white;
 }
+
 
 @media (max-width: 800px) {
   .grid-container {
