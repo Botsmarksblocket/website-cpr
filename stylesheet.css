@@ -153,9 +153,10 @@ body {
   border: solid black;
   padding: 10px;
   border-radius: 5px;
+  width:700px;
 }
 .form-group {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 textarea {
   height: 100px;
@@ -167,7 +168,7 @@ input[type="tel"],
 select,
 textarea {
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   border: 1px solid #112d4e;
   border-radius: 5px;
 }
@@ -277,7 +278,7 @@ td {
     margin-bottom: 15px;
   }
   .sign-up-item {
-    padding: 20px;
+    padding: 40px;
   }
   input[type="text"],
   input[type="email"],
