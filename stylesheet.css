@@ -45,8 +45,51 @@ body {
   justify-content: center;
   align-items: center;
 }
+.sign-up label {
+  display: inline-block;
+  font-weight: bold;
+}
 .sign-up-item {
-  background-color: lightblue;
+  background-color: #f9f7f7;
+  border: solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-group {
+  margin-bottom: 40px;
+}
+textarea {
+  height: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #112d4e;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 12px 16px;
+  border: 2px solid #112d4e;
+  color: #f9f7f7;
+  background-color: #3f72af;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
+  text-decoration: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
 }
 
 .header {
@@ -107,7 +150,7 @@ body {
   border-radius: 8px;
 }
 .styled-hr {
-  border: none; /* Remove default border */
+  border: none;
   height: 3px;
   background-color: #112d4e;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -209,6 +252,28 @@ td {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .sign-up-item {
+    padding: 20px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    padding: 15px;
+  }
+
+  input[type="submit"] {
+    width: 93%;
+  }
+
+  .header-btn {
+    min-width: 250px;
+    text-align: center;
   }
   .sidebar {
     /*Removes sidebar one phone*/
